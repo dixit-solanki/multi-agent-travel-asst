@@ -1,0 +1,38 @@
++------------------+
+|  User Proxy      |
+|  (Start & Relay) |
++--------+---------+
+         |
+         v
++--------+------------------+
+| Destination Expert        |
+| ➤ Suggest destination     |
+| ➤ Attractions, customs    |
++--------+------------------+
+         |
+         v
++--------+------------------+
+| Itinerary Creator         |
+| ➤ Day-by-day plan         |
+| ➤ Meals, lodging, etc.    |
++--------+------------------+
+         |
+         v
++--------+------------------+
+| Budget Analyst            |
+| ➤ Estimate costs          |
+| ➤ Budget tips             |
++--------+------------------+
+         |
+         v
++--------+------------------+
+| Report Writer             |
+| ➤ Compile final report    |
+| ➤ Sections: Summary, etc. |
++--------+------------------+
+         |
+         v
++--------+---------+
+|  User Proxy      |
+|  (Returns Final) |
++------------------+

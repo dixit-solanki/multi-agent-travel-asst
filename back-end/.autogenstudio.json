@@ -1,0 +1,39 @@
+{
+  "groupchat": {
+    "agents": [
+      {
+        "name": "User_Proxy_Agent",
+        "type": "user_proxy",
+        "human_input_mode": "NEVER"
+      },
+      {
+        "name": "Destination_Expert_Agent",
+        "type": "assistant",
+        "system_message": "You are the Destination Expert. Suggest one destination..."
+      },
+      {
+        "name": "Itinerary_Creator_Agent",
+        "type": "assistant",
+        "system_message": "Create a day-by-day itinerary..."
+      },
+      {
+        "name": "Budget_Analyst_Agent",
+        "type": "assistant",
+        "system_message": "Estimate costs: transport, stay, food..."
+      },
+      {
+        "name": "Report_Writer_Agent",
+        "type": "assistant",
+        "system_message": "Compile a full travel report based on outputs..."
+      }
+    ],
+    "transition_mode": "allowed",
+    "transitions": [
+      ["User_Proxy_Agent", "Destination_Expert_Agent"],
+      ["Destination_Expert_Agent", "Itinerary_Creator_Agent"],
+      ["Itinerary_Creator_Agent", "Budget_Analyst_Agent"],
+      ["Budget_Analyst_Agent", "Report_Writer_Agent"],
+      ["Report_Writer_Agent", "User_Proxy_Agent"]
+    ]
+  }
+}
